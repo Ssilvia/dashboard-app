@@ -18,22 +18,22 @@
         <nav class="navbar navbar-expand-lg m-0 py-2 p-md-0">
           <div class="container">
             <a class="navbar-brand bg-primary text-center rounded--100 text-white" href="#"><i class="fas fa-burn"></i></a>
-            <button class="navbar-toggler p-0 border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler px-2 py-1 border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse navbar-collapse--edge mt-3 mt-md-0" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse navbar-collapse--edge mt-3 mt-md-0 me-md-1" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-0 ms-md-5">
                 <li class="nav-item">
-                  <a class="navbar-nav__link nav-link navbar-nav__link--active py-1 py-md-3 px-4 px-md-0" aria-current="page" href="#">Dashboard</a>
+                  <a class="navbar-nav__link nav-link navbar-nav__link--active py-1 py-md-3 px-4 px-md-0" title="Dashboard" aria-current="page" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item ms-md-5">
-                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" href="#Analytics">Analytics</a>
+                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" title="Analytics" href="#Analytics">Analytics</a>
                 </li>
                 <li class="nav-item ms-md-5">
-                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" href="#Reports">Reports</a>
+                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" title="Reports" href="#Reports">Reports</a>
                 </li>
                 <li class="nav-item ms-md-5">
-                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" href="#News">News</a>
+                  <a class="navbar-nav__link nav-link py-1 py-md-3 px-4 px-md-0" title="News" href="#News">News</a>
                 </li>
               </ul>
               <div class="d-flex">
@@ -57,6 +57,66 @@
           </div>
         </nav>
     </header>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
+              <header class="widget__header">
+                <h5 class="widget__title">Tasks Overview</h5>
+              </header>
+              <div class="widget__content">
+                <p class="text-dark mb-0">Content</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
+              <header class="widget__header">
+                <h5 class="widget__title">Recent Activity</h5>
+              </header>
+              <div class="widget__content">
+                <p class="text-dark mb-0">Content</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
+              <header class="widget__header">
+                <h5 class="widget__title">Logged Time</h5>
+              </header>
+              <div class="widget__content">
+                <p class="text-dark mb-0">Content</p>
+              </div>
+            </div>
+
+            <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded">
+              <header class="widget__header">
+                <h5 class="widget__title">Assignees</h5>
+              </header>
+              <div class="widget__content">
+                <p class="text-dark mb-0">Content</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12">
+              <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded">
+                <header class="widget__header">
+                  <h5 class="widget__title">Tasks</h5>
+                </header>
+                <div class="widget__content">
+                  <p class="text-dark mb-0">Content</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!--Custom Scripts-->
