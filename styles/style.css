@@ -4,17 +4,31 @@ body {
 
 /** Utilities */
 .rounded--100 {
+	
+	border-radius: 100%;
+}
+
+.navbar-brand {
 	width: 2.5rem;
 	height: 2.5rem;
-	border-radius: 100%;
+}
+
+.navbar-collapse.show {
+	border-top: 1px solid #ddd;
 }
 
 .navbar-nav__link {
 	color: #666;
-	border-bottom: 3px solid transparent;
+	border-bottom: 1px solid #ddd;
 	-webkit-transition: 0.5s all ease;
-	-moz-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease
 	transition: 0.5s all ease;
+}
+
+@media(min-width:768px){
+	.navbar-nav__link {
+		border-bottom: 3px solid transparent;
+	}
 }
 
 .navbar-nav__link:hover,
@@ -30,9 +44,15 @@ body {
 	border-bottom-color: purple;
 }
 
+.navbar-collapse--edge {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
 /** Header */
 .dropdown-toggle--user {
-	padding-left: 60px;
+	padding-left: 4rem;
+	padding-right: 2rem;
 }
 
 .dropdown-toggle--user::after {
