@@ -14,52 +14,48 @@
     <title>Dashboard Website App</title>
   </head>
   <body>
-    <header class="bg-white border-bottom pt-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-1">
-            <a href="#" class="text-decoration">Logo</a>
-          </div>
-          <div class="col-12 col-md-8 col-lg-9">
-            <nav class="app__nav">
-              <ul class="m-0 p-0">
-                
-                <li class="app__nav__item d-inline-block me-md-5">
-                  <a href="#Dashboard" class="app__nav__item__link app__nav__item__link--active px-3 pt-1 pb-4 d-block text-decoration-none">Dashboard</a>
+    <header class="bg-white border-bottom">
+        <nav class="navbar navbar-expand-lg m-0 p-0">
+          <div class="container">
+            <a class="navbar-brand bg-primary text-center rounded--100 text-white" href="#">X</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-0 ms-5">
+                <li class="nav-item">
+                  <a class="navbar-nav__link nav-link navbar-nav__link--active pb-3 pt-3" aria-current="page" href="#">Dashboard</a>
                 </li>
-
-                <li class="app__nav__item d-inline-block me-md-5">
-                  <a href="#News" class="app__nav__item__link px-3 pt-1 pb-4 d-block text-decoration-none">News</a>
+                <li class="nav-item ms-5">
+                  <a class="navbar-nav__link nav-link pb-3 pt-3" href="#Analytics">Analytics</a>
                 </li>
-
-                <li class="app__nav__item d-inline-block me-md-5">
-                  <a href="#Reports" class="app__nav__item__link px-3 pt-1 pb-4 d-block text-decoration-none">Reports</a>
+                <li class="nav-item ms-5">
+                  <a class="navbar-nav__link nav-link pb-3 pt-3" href="#Reports">Reports</a>
                 </li>
-
+                <li class="nav-item ms-5">
+                  <a class="navbar-nav__link nav-link pb-3 pt-3" href="#News">News</a>
+                </li>
               </ul>
-            </nav>
-          </div>
-          <div class="col-12 col-md-3 col-lg-2">
-            
-            <div class="dropdown w-100">
-              <button class="dropdown-toggle--user btn btn-block w-100 pt-0 position-relative text-start bg-white text-dark dropdown-toggle" type="button" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="avatar position-absolute border overflow-hidden bg-secondary">
-                  <img src="imaegs/avatar.png" alt="Avatar of Account User" />
-                </div>
-                <h6 class="m-0 text-dark text-start">Sarah Silvia</h6>
-                <small class="text-secondary text-start">Admin</small>
-              </button>
-              <ul class="dropdown-menu w-100" aria-labelledby="dropdownUser">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+              <div class="d-flex">
+              <div class="dropdown w-100">
+                <button class="dropdown-toggle--user btn btn-block w-100 pt-0 pe-5 position-relative text-start bg-white text-dark dropdown-toggle" type="button" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="avatar position-absolute border overflow-hidden bg-secondary">
+                    <img src="https://via.placeholder.com/40" alt="Avatar of Account User" />
+                  </div>
+                  <h6 class="mt-2 mb-0 text-dark text-start">Sarah Silvia</h6>
+                  <div class="text-secondary text-start small">Admin</div>
+                  <div class="notification-badge notification-badge--sm rounded--100 text-center text-white bg-danger position-absolute d-inline-block">2</div>
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dropdownUser">
+                  <li><a class="dropdown-item" href="#">Notifications <span class="d-inline-block notification-badge notification-badge--md rounded--100 text-center text-white bg-danger float-end">2</span></a></li>
+                  <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Preferences</a></li>
+                </ul>
+              </div>
+              </div>
             </div>
-
           </div>
-        </div>
-
-      </div>
+        </nav>
     </header>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
