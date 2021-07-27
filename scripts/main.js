@@ -31,7 +31,7 @@ var myChart = new Chart(ctx, {
     }
 });
 
-//Recent Activity Line Chart
+//Task Performance Line Chart
 var ctx = document.getElementById('taskPerformance');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -54,5 +54,22 @@ var myChart = new Chart(ctx, {
                 beginAtZero: true
             }
         }
+    }
+});
+
+//Doughnut Chart
+var ctx = document.getElementById('loggedTime');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Billable', 'Non-Billable'],
+        datasets: [{
+            label: 'Logged Time',
+            data: [26, 16],
+            backgroundColor: [
+                'rgba(75, 192, 192, 1)',
+                '#cccccc'
+            ]
+        }]
     }
 });
