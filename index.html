@@ -57,7 +57,7 @@
           </div>
         </nav>
     </header>
-    <section>
+    <section class="mb-3">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4">
@@ -66,7 +66,7 @@
                 <h5 class="widget__title">Tasks Overview</h5>
               </header>
               <div class="widget__content">
-                <p class="text-dark mb-0">Content</p>
+                <canvas id="taskOverview" width="400" height="300"></canvas>
               </div>
             </div>
           </div>
@@ -74,10 +74,10 @@
           <div class="col-12 col-md-4">
             <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
               <header class="widget__header">
-                <h5 class="widget__title">Recent Activity</h5>
+                <h5 class="widget__title">Task Performance</h5>
               </header>
               <div class="widget__content">
-                <p class="text-dark mb-0">Content</p>
+                <canvas id="taskPerformance" width="400" height="300"></canvas>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
 
             <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded">
               <header class="widget__header">
-                <h5 class="widget__title">Assignees</h5>
+                <h5 class="widget__title">Recent Activity</h5>
               </header>
               <div class="widget__content">
                 <p class="text-dark mb-0">Content</p>
@@ -104,12 +104,52 @@
           </div>
 
           <div class="col-12">
-              <div class="widget shadow-light bg-white p-3 p-lg-4 my-2 rounded">
+              <div class="widget shadow-light bg-white p-3 p-lg-4 mt-4 rounded">
                 <header class="widget__header">
                   <h5 class="widget__title">Tasks</h5>
                 </header>
                 <div class="widget__content">
-                  <p class="text-dark mb-0">Content</p>
+                  <table class="table table-striped table-bordered mt-3">
+                    <thead>
+                      <tr>
+                        <th>Task Name</th>
+                        <th>Assignee</th>
+                        <th>Due Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                      <tr>
+                        <td>Task Name</td>
+                        <td>Assignee</td>
+                        <td>Due Date</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -121,5 +161,70 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!--Custom Scripts-->
     <script type="text/javascript" src="scripts/main.js"></script>
+    <!--Chart JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+    //Task Overview Chart
+    var ctx = document.getElementById('taskOverview');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Overdue', 'Open', 'Upcoming', 'Complete'],
+            datasets: [{
+                label: '# of Tasks',
+                data: [12, 19, 6, 8],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    //Recent Activity Line Chart
+    var ctx = document.getElementById('taskPerformance');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['4/21', '5/21', '6/21', '7/21', '8/21'],
+            datasets: [{
+                label: 'Tasks Completed',
+                data: [6, 22, 19, 16, 25],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 0.2)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    </script>
+
   </body>
 </html>
