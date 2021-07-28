@@ -8,6 +8,49 @@ body {
 	border-radius: 100%;
 }
 
+@media(min-width:768px){
+	.bg-md-white {
+		background-color: #fff;
+	}
+}
+
+.bg-light-green {
+	background-color: rgb(193 234 234);
+}
+
+.bg-light-blue {
+	background-color: rgba(54, 162, 235, 0.2);
+}
+
+.bg-light-yellow {
+	background-color: rgb(255 240 202);
+}
+
+.text-dark-yellow {
+	color: rgb(251 193 50);
+}
+
+.text-blue {
+	color: rgb(54, 162, 235);
+}
+
+.text-green {
+	color: rgba(75, 192, 192);
+}
+
+.border-blue {
+	border: 1px solid rgb(54, 162, 235);
+}
+
+.border-green {
+	border: 1px solid rgba(75, 192, 192);
+}
+
+.border-yellow {
+	border: 1px solid rgb(251 193 50);
+}
+
+
 .ls-1 {
 	letter-spacing: 1px;
 }

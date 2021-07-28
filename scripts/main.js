@@ -3,21 +3,22 @@ var ctx = document.getElementById('taskOverview');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Overdue', 'Open', 'Upcoming', 'Complete'],
+        labels: ['Overdue', 'Open', 'Due Soon', 'Complete'],
         datasets: [{
             label: '# of Tasks',
-            data: [12, 19, 6, 8],
+            data: [61, 690, 420, 844],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)'
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)'
+                
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)'
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
             ],
             borderWidth: 1
         }]
@@ -39,12 +40,12 @@ var myChart = new Chart(ctx, {
         labels: ['4/21', '5/21', '6/21', '7/21', '8/21'],
         datasets: [{
             label: 'Tasks Completed',
-            data: [6, 22, 19, 16, 25],
+            data: [134, 190, 150, 164, 95],
             backgroundColor: [
-                'rgba(54, 162, 235, 0.2)'
+                'rgba(75, 192, 192, 1)'
             ],
             borderColor: [
-                'rgba(54, 162, 235, 0.2)'
+                'rgba(75, 192, 192, 0.5)'
             ]
         }]
     },

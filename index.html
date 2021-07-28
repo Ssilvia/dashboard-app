@@ -10,7 +10,7 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Dashboard Website App</title>
   </head>
   <body>
@@ -60,7 +60,7 @@
     <section class="mb-3">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
               <header class="widget__header">
                 <h5 class="widget__title">Tasks Overview</h5>
@@ -71,7 +71,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
               <header class="widget__header">
                 <h5 class="widget__title">Task Performance</h5>
@@ -82,26 +82,75 @@
             </div>
           </div>
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
 
-            <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded">
-              <header class="widget__header">
-                <h5 class="widget__title">Recent Activity</h5>
-              </header>
-              <div class="widget__content">
-                <p class="text-dark mb-0">Content</p>
+            <div class="widget shadow-light bg-light-green border-green p-3 mt-4 mb-3 rounded">
+              <div class="row">
+                <div class="col-3 text-center">
+                  <h1 class="text-green">164</h1>
+                </div>
+                <div class="col-9">
+                  <header class="widget__header">
+                    <h5 class="widget__title mb-0">Tasks Completed</h5>
+                  </header>
+                  <div class="widget__content">
+                    <p class="text-secondary mb-0">in the last 30 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="widget shadow-light bg-light-yellow border-yellow p-3 my-3 rounded">
+              <div class="row">
+                <div class="col-3 text-center">
+                  <h1 class="text-dark-yellow">98</h1>
+                </div>
+                <div class="col-9">
+                  <header class="widget__header">
+                    <h5 class="widget__title mb-0">Tasks Due</h5>
+                  </header>
+                  <div class="widget__content">
+                    <p class="text-secondary mb-0">in the next 30 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="widget shadow-light bg-light-blue border-blue p-3 my-3 rounded">
+              <div class="row">
+                <div class="col-3 text-center text-blue">
+                  <h1>60<sup class="fw-lighter">%</sup></h1>
+                </div>
+                <div class="col-9">
+                  <header class="widget__header">
+                    <h5 class="widget__title mb-0">Avg Productivity Rate</h5>
+                  </header>
+                  <div class="widget__content">
+                    <p class="text-secondary mb-0">Tasks Completed / Assignee</p>
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-9">
-              <div class="widget shadow-light bg-white p-3 p-lg-4 mt-4 rounded">
+          <div class="col-12 col-lg-9">
+              <div class="widget shadow-light bg-white p-3 p-lg-4 mt-lg-3 me-md-2 rounded">
                 <header class="widget__header">
-                  <h5 class="widget__title">Tasks</h5>
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <h5 class="widget__title mt-2">Tasks</h5>
+                    </div>
+                    <div class="col-12 col-md-4">
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <input type="text" id="search" class="search form-control" placeholder="Search.." />
+                    </div>
+                  </div>
+                  
                 </header>
                 <div class="widget__content">
-                  <table class="table mt-3">
+                  <table class="table tasks-table mt-3" id="tasksTable">
                     <thead class="bg-secondary">
                       <tr class="border-0">
                         <th class="ls-1 small text-white pb-1" style="width:1rem;"></th>
@@ -113,47 +162,46 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Delivery</a></td>
+                        <td>Sarah Silvia</td>
                         <td class="text-end">4h 2m</td>
-                        <td class="text-end">9/12/21</td>
+                        <td class="text-end">9/25/21</td>
                       </tr>
                       <tr class="table-light">
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Schedule</a></td>
+                        <td>Johnathan Smiths</td>
                         <td class="text-end">1h 2m</td>
-                        <td class="text-end">9/12/21</td>
+                        <td class="text-end">9/26/21</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Organize</a></td>
+                        <td>Nathan Duarte</td>
                         <td class="text-end">3h 31m</td>
-                        <td class="text-end">9/12/21</td>
+                        <td class="text-end">9/26/21</td>
                       </tr>
                       <tr class="table-light">
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Review</a></td>
+                        <td>Roger Williams</td>
                         <td class="text-end"></td>
-                        <td class="text-end">9/12/21</td>
-                        
+                        <td class="text-end">9/27/21</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Write</a></td>
+                        <td>Diane Shallows</td>
                         <td class="text-end">12m</td>
-                        <td class="text-end">9/12/21</td>
+                        <td class="text-end">9/28/21</td>
                       </tr>
                       <tr class="table-light">
-                        <td><input type="checkbox" class="mr-1" /></td>
-                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Task Name</a></td>
-                        <td>Assignee</td>
+                        <td><input type="checkbox" class="mr-1 form-check-input" /></td>
+                        <td><a href="#Task" class="fw-bold text-decoration-none text-dark">Contact</a></td>
+                        <td>Sandra Harolds</td>
                         <td class="text-end">2h 8m</td>
-                        <td class="text-end">9/12/21</td>
+                        <td class="text-end">9/30/21</td>
                       </tr>
                     </tbody>
                   </table>
@@ -161,13 +209,13 @@
               </div>
             </div>
             
-            <div class="col-12 col-md-3">
-              <div class="widget shadow-light bg-white p-3 p-lg-4 my-4 rounded mb-1">
+            <div class="col-12 col-md-6 col-lg-3 widget shadow-light bg-md-white rounded mt-3">
+              <div class="p-3 p-lg-4 bg-white">
                 <header class="widget__header">
                   <h5 class="widget__title">Logged Time</h5>
                 </header>
                 <div class="widget__content mt-3">
-                  <canvas id="loggedTime" width="150" height="250" class="mb-5"></canvas>
+                  <canvas id="loggedTime" width="200" height="350" class="mb-4"></canvas>
                 </div>
               </div>
             </div>
