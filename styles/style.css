@@ -1,11 +1,15 @@
 body {
 	background-color: #e1e5ef;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /** Utilities */
 .rounded--100 {
-	
 	border-radius: 100%;
+}
+
+.ls-1 {
+	letter-spacing: 1px;
 }
 
 .shadow-light {
